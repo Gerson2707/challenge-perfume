@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root{
+--Darkcyan: hsl(158, 36%, 37%);
+--Cream: hsl(30, 38%, 92%);
+--Verydarkblue: hsl(212, 21%, 14%);
+--Darkgrayishblue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5rem;
+}
+
+body {
+    background-color: var(--Cream);
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.ff{
+    
+    font-family: 'Fraunces', serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.image-mobile {
+    display: block;
+}
+.image-desktop {
+    display: none;
+}
+.container{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+.product {
+    background-color: var(--White);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.product-info h3 {
+    color: var(--Darkgrayishblue);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: 5px;
+}
+.product-info h2 {
+    color: var(--Verydarkblue);
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    font-weight: 200;
+    letter-spacing: 2px;
+    line-height: 2rem;
+}
+
+.product-info p {
+    color: var(--Darkgrayishblue);
+    font-size:  1.1rem;
+    font-weight: 500;
+}
+
+.price{
+    display: flex;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+
+.price span {
+    display: inline-block;
+}
+
+.price span:nth-child(1){
+    font-family: 'Fraunces', serif;
+    color: var(--Darkcyan);
+    font-size: 3rem;
+}
+
+.price span:nth-child(2){
+    font-family: 'Montserrat', sans-serif;
+    color: var(--Darkgrayishblue);
+    text-decoration: line-through;
+  
+}
+
+.btn{
+    background-color: var(--Darkcyan);
+    color: var(--White);
+    border-radius: .5rem;
+    padding: 10px 0;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.btn:hover svg{
+    animation: moveIcon 2s infinite;
+
+}
+
+.btn:active {
+    transform: scale(.95);
+}
+
+@keyframes moveIcon{
+    0% {
+        transform: translateY(5px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(5px);
+    }
+}
+
+@media (min-width: 800px){
+.image-desktop{
+    display: block;
+}
+
+
+.image-mobile{
+    display: none;
+}
+
+.product{
+    display: flex;
+   max-width: 700px;
+}
+
+}
